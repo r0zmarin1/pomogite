@@ -1,0 +1,65 @@
+﻿<Window x:Class="WpfApp8.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        FontSize="18"
+        FontFamily="Century Gothic"
+        Title="Calculator" 
+        ResizeMode="CanMinimize"
+        Height="450" Width="315">
+    <Window.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="1"/>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="0,0,0,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            
+        </Grid.RowDefinitions>
+        <TextBox x:Name="input" TextAlignment="Right" Padding="15" Grid.ColumnSpan="6"/>
+        <Button Grid.Row="1" Content="←" Click="ClickBackSpace"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="CE" Click="ClickClear"/>
+        <Button Grid.Column="1" Grid.Row="2" Content="8" Click="ClickNumber"/>
+        <Button Grid.Column="1" Grid.Row="3" Content="5" Click="ClickNumber"/>
+        <Button Grid.Column="1" Grid.Row="4" Content="2" Click="ClickNumber"/>
+        <Button Grid.Row="2" Content="7" Click="ClickNumber"/>
+        <Button Grid.Row="3" Content="4" Click="ClickNumber"/>
+        <Button Grid.Row="4" Content="1" Click="ClickNumber"/>
+        <Button Grid.ColumnSpan="2" Grid.Row="5" Content="0" Click="ClickNumber"/>
+        <Button Grid.Column="2" Grid.Row="1" Content="C" Click="ClickClear"/>
+        <Button Grid.Column="2" Grid.Row="2" Content="9" Click="ClickNumber"/>
+        <Button Grid.Column="2" Grid.Row="3" Content="6" Click="ClickNumber"/>
+        <Button Grid.Column="2" Grid.Row="4" Content="3" Click="ClickNumber"/>
+        <Button Grid.Column="2" Grid.Row="5" Content="," Click="ClickDot"/>
+        <Button Grid.Column="3" Grid.Row="2" Content="/" Click="ClickOperation"/>
+        <Button Grid.Column="3" Grid.Row="3" Content="*" Click="ClickOperation"/>
+        <Button Grid.Column="3" Grid.Row="4" Content="-" Click="ClickOperation"/>
+        <Button Grid.Column="3" Grid.Row="5" Content="+" Click="ClickOperation"/>
+        <Button Grid.Column="3" Grid.Row="1" Content="±" Click="ClickPlusMinus"/>
+        <Button Grid.Column="4" Grid.Row="2" Content="%" Click="ClickProcent"/>
+        <Button Grid.Column="4" Grid.Row="3" Content="1/x" Click="ClickDivideX"/>
+        <Button Grid.Column="4" Grid.Row="1" Content="√" Click="ClickSQR"/>
+        <Button Grid.Column="4" Grid.Row="4" Grid.RowSpan="2" Content="=" Click="ClickRavno"/>
+        <Button Grid.Column="5" Grid.Row="1" Content="x²" Click="ClickOperation"/>
+        <Button Grid.Column="5" Grid.Row="2" Grid.RowSpan="2" Content="π" Click="ClickPi"/>
+        <Button Grid.Column="5" Grid.Row="4" Grid.RowSpan="2" Content="sin" Click="ClickSin"/>
+    </Grid>
+</Window>
